@@ -46,3 +46,9 @@ samples/*.parquet
 *.nupkg
 *.snupkg
 packages/
+
+# Local TODO files
+todo.md
+
+# MSBuild binary logs
+*.binlog
