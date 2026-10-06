@@ -117,6 +117,15 @@ jobs:
             --skip-duplicate \
             --no-symbols
 
+      - name: Export Standardized API Model
+        run: dotnet run scripts/ExportApiDocs.cs -- --out ./artifacts
+
+      - name: Upload Derived Outputs (API Model)
+        uses: actions/upload-artifact@v4
+        with:
+          name: derived-outputs
+          path: ./artifacts/api-model.json
+
       - name: Upload Test Coverage Artifacts
         uses: actions/upload-artifact@v4
         with:
