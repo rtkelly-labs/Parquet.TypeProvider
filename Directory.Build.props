@@ -13,8 +13,8 @@
     <Authors>Ryan Kelly</Authors>
     <Copyright>Copyright (c) 2026 Ryan Kelly</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/rtkelly13/Parquet.TypeProvider</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/rtkelly13/Parquet.TypeProvider.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/rtkelly-labs/Parquet.TypeProvider</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rtkelly-labs/Parquet.TypeProvider.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>parquet;fsharp;typeprovider;data;performance;dotnet</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
