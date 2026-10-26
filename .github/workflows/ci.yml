@@ -24,6 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Verify filesystem structure & script extensions
+        uses: ls-lint/action@a87c5eb4fb26d7af1bd0adba203dd1e76f7e94eb # v2.3.2
+        with:
+          config: .ls-lint.yml
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
