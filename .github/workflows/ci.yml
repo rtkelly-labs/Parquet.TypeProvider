@@ -24,6 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Verify filesystem structure & script extensions
+        uses: ls-lint/action@a87c5eb4fb26d7af1bd0adba203dd1e76f7e94eb # v2.3.2
+        with:
+          config: .ls-lint.yml
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -58,6 +63,9 @@ jobs:
 
       - name: Build solution (Release)
         run: dotnet build Parquet.TypeProvider.sln --configuration Release --no-restore -warnaserror
+
+      - name: Export Standardized API Model
+        run: dotnet run scripts/ExportApiDocs.cs -- --out ./artifacts
 
       - name: Run Full Test Suite with Code Coverage Collection
         run: dotnet test Parquet.TypeProvider.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
@@ -116,9 +124,6 @@ jobs:
             --source github \
             --skip-duplicate \
             --no-symbols
-
-      - name: Export Standardized API Model
-        run: dotnet run scripts/ExportApiDocs.cs -- --out ./artifacts
 
       - name: Upload Derived Outputs (API Model)
         uses: actions/upload-artifact@v4
