@@ -64,6 +64,9 @@ jobs:
       - name: Build solution (Release)
         run: dotnet build Parquet.TypeProvider.sln --configuration Release --no-restore -warnaserror
 
+      - name: Export Standardized API Model
+        run: dotnet run scripts/ExportApiDocs.cs -- --out ./artifacts
+
       - name: Run Full Test Suite with Code Coverage Collection
         run: dotnet test Parquet.TypeProvider.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
 
@@ -121,9 +124,6 @@ jobs:
             --source github \
             --skip-duplicate \
             --no-symbols
-
-      - name: Export Standardized API Model
-        run: dotnet run scripts/ExportApiDocs.cs -- --out ./artifacts
 
       - name: Upload Derived Outputs (API Model)
         uses: actions/upload-artifact@v4
