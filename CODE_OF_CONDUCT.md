@@ -56,7 +56,9 @@ an individual is officially representing the community in public spaces.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the project maintainers at ryan@ryankelly.dev.
+reported confidentially through GitHub's private reporting route (via the
+repository's Security Advisories / "Report a vulnerability" tab) or following
+the organization `.github` SECURITY.md contact route.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the

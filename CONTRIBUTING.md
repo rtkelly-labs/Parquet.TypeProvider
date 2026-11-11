@@ -30,19 +30,10 @@ We follow a strict, modern GitHub workflow across our repositories:
      ```
 
 3. **Code Quality & Testing**:
-   - Ensure your code passes all local linting, type checks, and automated tests.
-   - For Python projects:
+   - Ensure your code passes all local builds and automated tests:
      ```bash
-     uv run ruff check .
-     uv run ruff format --check .
-     uv run pyright
-     uv run pytest
-     ```
-   - For TypeScript/Node projects:
-     ```bash
-     pnpm lint
-     pnpm typecheck
-     pnpm test
+     dotnet build Parquet.TypeProvider.sln
+     dotnet test Parquet.TypeProvider.sln
      ```
 
 4. **Pull Requests**:

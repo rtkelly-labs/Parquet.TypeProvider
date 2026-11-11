@@ -48,8 +48,8 @@ body:
     id: runtime-version
     attributes:
       label: Runtime & Toolchain Versions
-      description: e.g., Python 3.13 / Node 22 / .NET 10 / pnpm 12 / uv 0.6
-      placeholder: e.g. Python 3.13, uv 0.6
+      description: .NET SDK version, OS version, and Parquet.TypeProvider version (e.g. dotnet --version)
+      placeholder: e.g. .NET 10.0.100
     validations:
       required: false
   - type: textarea
